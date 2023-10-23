@@ -1,0 +1,318 @@
+:root{
+    /* Colores */
+    --gris:#D7D7D7;
+    --oscuro:#2E3947;
+    --amarillo:#D1B06B;
+    --blanco: #FFF;
+    --fondo: #1F2732;
+    --fondo2:#161D27;
+    --bitcoin-orange: #F7931A;
+    --soft-orange: #FFE9D4;
+    --secondary-blue: #1A9AF7;
+    --soft-blue: #E7F5FF;
+    --warm-black: #201E1C; 
+    --black: #282623;
+    --grey: #BABABA;
+    --off-white: #FAF8F7;
+    --just-white: #FFFFFF; 
+
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html{
+    font-size: 62.5%;
+    font-family: 'Rowan', serif;
+}
+
+main{
+    
+    background-image: url('./asssets/imgs/fondo3.png');
+    flex-shrink: 0;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+
+     
+
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .1);
+    backdrop-filter: blur(5px); 
+    z-index: -1;
+ }
+
+ .header::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,.4), transparent);
+    transition: .5s;
+}
+
+
+
+.logo{
+    font-size: 2.4rem;
+    font-family: 'Gambarino', serif;
+    color: antiquewhite;
+    text-decoration: none;
+    font-weight: 700;
+
+}
+.logo:hover{
+    color: #977656;
+}
+.navbar{
+    font-size: 1.15rem;
+    font-weight: 500;
+}
+.navbar a{
+    font-size: 1.7rem;
+    color: antiquewhite;
+    text-decoration: none;
+    margin-left: 2rem;
+}
+.navbar a:hover{
+    color: #977656;
+}
+#check{
+    display: none;
+}
+.icons{
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: antiquewhite;
+    cursor: pointer;
+    display: none;
+}
+
+.barber-img-container{
+    width: 100%;
+    min-width: 320px;
+    height: 50vh;
+
+
+}
+.info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+    width: 30%;
+    margin-left: 90px;
+    margin-top: 40px;
+}
+.info-container .info-container-h1{
+    color:  #F2DAC2;
+    font-family: 'Tanker', sans-serif;
+    font-size: 5rem;
+    font-style: normal;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    
+}
+
+.info-container .info-container-h2{
+    color:  #977656;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    
+}
+ .temas-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 80px auto;
+    padding: 10px;
+    width: 70%;
+    min-height: auto;
+}
+
+.temas-container div{
+    width: 100%;
+    height: 80%;
+    margin-left: 5px;
+}
+.barber-img-container h2{
+    justify-content: center;
+    text-align: center;
+    font-size: 2.1rem;
+    font-weight: italic;
+    color: var(--gris);
+    text-transform: uppercase;
+}
+.barber-img-container p{
+    justify-content: center;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: 401;
+    line-height: 2.2rem;
+    color: var(--gris);
+}
+
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: var(--warm-black);
+}
+footer .terminos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 90%;
+    padding-top: 25px;
+    padding-left: 25px;
+    
+}
+footer .footer-terminos{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--off-white);
+    text-decoration: none;
+}
+footer .face{
+    margin-top: 5px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(./asssets/icons/face.png);
+    
+}
+footer .insta{
+    margin-left: 10px;
+    margin-top: 5px;
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url(./asssets/icons/insta.png);
+    
+}
+footer p{
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--off-white);
+}
+footer a:hover{
+    color: var(--bitcoin-orange);
+}
+
+/* BREAKPOINTS */
+@media (min-width: 992px){
+    .header{
+        padding: 1.3rem 5%;
+    } 
+    .temas-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 50px auto;
+    padding: 10px;
+    width: 70%;
+    min-height: auto;
+}
+    
+}
+@media (max-width: 988px){
+    main{
+    
+        background-image: url('./asssets/imgs/fondo2.jpg');
+        flex-shrink: 0;
+        min-height: 100vh;
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .info-container{
+        display: none;
+    }
+    .icons{
+        display: inline-flex;
+    }   
+    #check:checked~.icons #menu-icon{
+        display: none;
+    }
+    .icons #close-icon{
+        display: none;
+    }
+    #check:checked~.icons #close-icon{
+        display: block;
+    }
+
+    .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        height: 0;
+        background: rgba(0, 0, 0, .1);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+        overflow: hidden;
+        transition: .3s ease;
+    }
+
+    #check:checked~.navbar{
+        height: 17.7rem;
+    }
+    .navbar a{
+        display: block;
+        font-size: 1.1rem;
+        margin: 1.5rem 0;
+        text-align: center;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .3s ease;
+    }
+    #check:checked~.navbar a{
+        transform: translateY(0px);
+        opacity: 1;
+        transition-delay: calc(.15s * var(--i));
+    }
+    .temas-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10px auto;
+        padding: 10px;
+        width: 70%;
+        min-height: auto;
+    }
+    .temas-container div{
+        width: 100%;
+        height: 80%;
+        padding: 10px;
+    }
+    
+}
