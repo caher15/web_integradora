@@ -32,8 +32,8 @@
                     <a href="#" style="--i:0;">Home</a>
                     <a href="#nosotros" style="--i:1;">Contacto</a>
                     <a href="#" style="--i:2;">Sign-Up</a>
-                    <a href="./login.html" style="--i:3;">Login </a>
-                    <a href="#" style="--i:4;">Gallery </a>
+                    <a href="./login.php" style="--i:3;">Login </a>
+                    <a href="./carrito.php" style="--i:4;">Productos </a>
                 </nav>
             </header>
             <div class="info-container">

@@ -9,13 +9,25 @@
   <title>Formulario</title>
 </head>
 <body>
+<form action="login2.php" method="post">
   <section class="form-register">
     <h4>Peaky Blinder's</h4>
-    <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-    <input class="controls" type="password" name="correo" id="correo" placeholder="Ingrese su Contraseña">
+    <?php
+        # si hay un mensaje, mostrarlo
+        if (isset($_GET["mensaje"])) { ?>
+            <div class="alert alert-info">
+                <?php echo $_GET["mensaje"] ?>
+            </div>
+        <?php } ?>
+    <input class="controls" id="usuario" type="email" name="usuario" required >
+    <input class="controls" id="palabraSecreta" type="password" name="clave" required >
     <input class="botons" type="submit" value="Iniciar Sesión">
-    <a class="botonR" href="./index.html">Regresar</a>
+    <a class="botonR" href="./index.php">Regresar</a>
   </section>
+</form>
+  
 
+            
+        
 </body>
 </html>
