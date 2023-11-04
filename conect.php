@@ -1,0 +1,4 @@
+; <?php exit; ?>
+MYSQL_DATABASE_NAME = "u402444865_chris"
+MYSQL_USER = "u402444865_chris"
+MYSQL_PASSWORD = "5YIv*VijQ/j"
